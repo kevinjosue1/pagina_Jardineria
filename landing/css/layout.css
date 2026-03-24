@@ -1,0 +1,38 @@
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+main {
+  overflow-x: clip;
+}
+
+/* Anclas: la cabecera fija no tapa el título de la sección */
+section[id],
+[id].anchor-target {
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+}
+
+.section {
+  padding-block: var(--space-section);
+}
+
+.section--tight {
+  padding-block: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.section--services {
+  background: var(--color-bg-muted);
+}
+
+.section--why {
+  text-align: center;
+}
+
+.section--news {
+  background: var(--color-bg-muted);
+}
+
+.section--clients {
+  text-align: left;
+}

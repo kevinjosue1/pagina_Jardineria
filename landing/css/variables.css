@@ -1,0 +1,55 @@
+:root {
+  /* Cabecera: verde bosque con matiz cálido (follaje denso) */
+  --color-header-bg: #1a3026;
+  --color-header-text: #f4faf2;
+  --color-header-hover: #c8f0a8;
+
+  /* Pie: un poco más profundo que el header */
+  --color-footer-bg: #13221a;
+
+  /* Fondos: crema papel + bruma vegetal (no grises fríos) */
+  --color-bg: #fbf9f4;
+  --color-bg-muted: #e6efe4;
+
+  /* Texto: carbón con tinte verde */
+  --color-text: #1a231c;
+  --color-text-muted: #4d5c52;
+
+  /* Acento principal: hoja / prado (más vivo que el verde “oficina”) */
+  --color-accent: #3d8c52;
+  --color-accent-dark: #2a6b3c;
+  --color-accent-contrast: #ffffff;
+
+  /* Acento tierra: maceta, barro, tronco — etiquetas y calidez */
+  --color-earth: #a85f3a;
+  --color-earth-hover: #c27146;
+
+  --color-border: #c2d1bd;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --container: min(1120px, 100% - 2 * clamp(1rem, 4vw, 2rem));
+  --space-section: clamp(2.5rem, 6vw, 4.5rem);
+  --radius: 6px;
+  --shadow-soft: 0 12px 40px rgb(26 48 38 / 0.1);
+  --shadow-accent: 0 6px 24px rgb(61 140 82 / 0.28);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 0.35s;
+  --header-h: 64px;
+  --carousel-autoplay-ms: 5500;
+
+  /* Carrusel: portada más espaciosa para mostrar mejor cada foto */
+  --hero-media-height: clamp(320px, 68vmin, 560px);
+  --hero-media-object-position: center 72%;
+
+  /* Recorte sin estirar: caja fija + object-fit: cover en CSS */
+  --media-object-position: center 30%;
+
+  /* Tarjetas novedades: alto fijo, ancho = columna */
+  --media-news-height: 280px;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --media-news-height: 240px;
+  }
+}
+

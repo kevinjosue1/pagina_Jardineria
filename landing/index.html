@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gardeborn — mantenimiento integral, cuidado del césped, limpieza del terreno e instalación de sistemas de riego. Todo lo que tu jardín necesita."
+    />
+    <title>Gardeborn — Jardinería integral para tu hogar o negocio</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="brand" href="#inicio" aria-label="Gardeborn, ir al inicio">
+          <img
+            class="brand__logo"
+            src="assets/images/logo%20verde.jpeg"
+            alt="Gardeborn"
+          />
+        </a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <ul class="site-nav__list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li class="site-nav__item site-nav__item--sub">
+              <button
+                type="button"
+                class="site-nav__sub-toggle"
+                aria-expanded="false"
+                aria-controls="submenu-servicios"
+              >
+                Servicios
+              </button>
+              <ul class="site-nav__sub" id="submenu-servicios">
+                <li><a href="#servicios">Ver todos los servicios</a></li>
+                <li>
+                  <a href="#servicio-mantenimiento">Mantenimiento integral</a>
+                </li>
+                <li><a href="#servicio-cesped">Cuidado del césped</a></li>
+                <li>
+                  <a href="#servicio-limpieza">Limpieza del terreno</a>
+                </li>
+                <li>
+                  <a href="#servicio-riego">Instalación de sistema de riego</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#novedades">Ideas</a></li>
+            <li><a href="#contacto">Contáctenos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <h1 class="visually-hidden">
+        Gardeborn — Jardinería integral para tu hogar o negocio
+      </h1>
+      <section
+        id="inicio"
+        class="spotlights hero-carousel"
+        aria-roledescription="carrusel"
+        aria-label="Servicios destacados Gardeborn"
+        data-hero-carousel
+      >
+        <div class="hero-carousel__stage">
+          <div
+            class="hero-carousel__viewport"
+            tabindex="0"
+            id="hero-carousel-viewport"
+          >
+            <div class="hero-carousel__track" id="hero-carousel-track">
+              <article
+                class="hero-carousel__slide spotlight-card"
+                aria-hidden="false"
+                data-carousel-index="0"
+              >
+                <a class="spotlight-card__link" href="#servicio-mantenimiento">
+                  <figure class="spotlight-card__media">
+                    <img
+                      src="assets/images/banner1.jpeg"
+                      alt="Mantenimiento integral — vista banner"
+                      fetchpriority="high"
+                    />
+                  </figure>
+                  <div class="spotlight-card__body">
+                    <h2 class="spotlight-card__title">Mantenimiento integral</h2>
+                    <p class="spotlight-card__tagline">
+                      Visitas y tareas para plantas, bordes y detalle general
+                    </p>
+                    <span class="text-link">Solicitar información</span>
+                  </div>
+                </a>
+              </article>
+
+              <article
+                class="hero-carousel__slide spotlight-card"
+                aria-hidden="true"
+                data-carousel-index="1"
+              >
+                <a class="spotlight-card__link" href="#servicio-cesped">
+                  <figure class="spotlight-card__media">
+                    <img
+                      src="assets/images/banner2.jpeg"
+                      alt="Cuidado del césped — vista banner"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div class="spotlight-card__body">
+                    <h2 class="spotlight-card__title">Cuidado del césped</h2>
+                    <p class="spotlight-card__tagline">
+                      Corte, bordes y verde uniforme, sin encharcamientos
+                    </p>
+                    <span class="text-link">Solicitar información</span>
+                  </div>
+                </a>
+              </article>
+
+              <article
+                class="hero-carousel__slide spotlight-card"
+                aria-hidden="true"
+                data-carousel-index="2"
+              >
+                <a class="spotlight-card__link" href="#servicio-limpieza">
+                  <figure class="spotlight-card__media">
+                    <img
+                      src="assets/images/banner3.png"
+                      alt="Limpieza del terreno — vista banner"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div class="spotlight-card__body">
+                    <h2 class="spotlight-card__title">Limpieza del terreno</h2>
+                    <p class="spotlight-card__tagline">
+                      Hojas, ramas y terreno listo para regar o plantar
+                    </p>
+                    <span class="text-link">Solicitar información</span>
+                  </div>
+                </a>
+              </article>
+
+              <article
+                class="hero-carousel__slide spotlight-card"
+                aria-hidden="true"
+                data-carousel-index="3"
+              >
+                <a class="spotlight-card__link" href="#servicio-riego">
+                  <figure class="spotlight-card__media">
+                    <img
+                      src="assets/images/banner4.jpeg"
+                      alt="Sistema de riego — vista banner"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div class="spotlight-card__body">
+                    <h2 class="spotlight-card__title">
+                      Instalación de sistema de riego
+                    </h2>
+                    <p class="spotlight-card__tagline">
+                      Aspersión o goteo, programación y ahorro de agua
+                    </p>
+                    <span class="text-link">Solicitar información</span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-carousel__chrome container">
+          <div class="hero-carousel__controls" aria-label="Controles del carrusel">
+            <button
+              type="button"
+              class="hero-carousel__arrow hero-carousel__arrow--prev"
+              aria-controls="hero-carousel-track"
+              aria-label="Anterior"
+            >
+              <svg
+                class="hero-carousel__arrow-icon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 6l-6 6 6 6"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="hero-carousel__dots"
+              role="group"
+              aria-label="Seleccionar imagen del carrusel"
+              id="hero-carousel-dots"
+            ></div>
+
+            <button
+              type="button"
+              class="hero-carousel__arrow hero-carousel__arrow--next"
+              aria-controls="hero-carousel-track"
+              aria-label="Siguiente"
+            >
+              <svg
+                class="hero-carousel__arrow-icon"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 6l6 6-6 6"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <p
+            class="hero-carousel__status visually-hidden"
+            id="hero-carousel-status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            Diapositiva 1 de 4
+          </p>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Diferenciales Gardeborn">
+        <div class="container trust-strip__inner" data-reveal>
+          <article class="trust-strip__item">
+            <span class="trust-strip__icon" aria-hidden="true">
+              <img
+                src="assets/images/time.png"
+                alt=""
+                loading="lazy"
+                width="24"
+                height="24"
+              />
+            </span>
+            <h2 class="trust-strip__title">Respuesta en menos de 24 horas</h2>
+            <p class="trust-strip__text">
+              Confirmamos visita o llamada para definir alcance y tiempos.
+            </p>
+          </article>
+
+          <article class="trust-strip__item">
+            <span class="trust-strip__icon" aria-hidden="true">
+              <img
+                src="assets/images/clipboard.png"
+                alt=""
+                loading="lazy"
+                width="24"
+                height="24"
+              />
+            </span>
+            <h2 class="trust-strip__title">Plan de trabajo por servicio</h2>
+            <p class="trust-strip__text">
+              Mantenimiento, césped, limpieza y riego con tareas claras por etapa.
+            </p>
+          </article>
+
+          <article class="trust-strip__item">
+            <span class="trust-strip__icon" aria-hidden="true">
+              <img
+                src="assets/images/check.png"
+                alt=""
+                loading="lazy"
+                width="24"
+                height="24"
+              />
+            </span>
+            <h2 class="trust-strip__title">Atención y seguimiento continuo</h2>
+            <p class="trust-strip__text">
+              Revisamos resultados y ajustamos frecuencia según temporada.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="nosotros"
+        class="section section--tight band-intro"
+        aria-labelledby="nosotros-heading"
+      >
+        <div class="container band-intro__layout" data-reveal>
+          <div class="band-intro__copy">
+            <h2 id="nosotros-heading" class="band-intro__title">
+              En Gardeborn, la jardinería es nuestro foco
+            </h2>
+            <p class="band-intro__subtitle">
+              Mantenimiento integral · Césped · Limpieza · Riego
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="servicios"
+        class="section section--services"
+        aria-labelledby="servicios-heading"
+        tabindex="-1"
+      >
+        <div class="container services-section">
+          <header class="services-section__header" data-reveal>
+            <p class="services-section__eyebrow">Qué ofrecemos</p>
+            <h2 id="servicios-heading" class="services-section__title">
+              Servicios de jardinería
+            </h2>
+            <p class="services-section__lead">
+              Cuatro líneas de trabajo que se complementan: planificación,
+              ejecución y seguimiento para que tu espacio verde se mantenga en
+              buen estado durante todo el año.
+            </p>
+          </header>
+
+          <div class="service-grid">
+          <article
+            id="servicio-mantenimiento"
+            class="service-block anchor-target"
+            data-reveal
+          >
+            <figure class="service-block__media">
+              <img
+                src="assets/images/servicios.jpeg"
+                alt="Mantenimiento integral de jardines — foto de servicio"
+                loading="lazy"
+              />
+            </figure>
+            <div class="service-block__content">
+              <div class="service-block__head">
+                <span class="service-block__index" aria-hidden="true">01</span>
+                <h3 class="service-block__title">Mantenimiento integral</h3>
+              </div>
+              <p>
+                Planificamos visitas y tareas para que tu jardín se mantenga en
+                orden: salud de las plantas, bordes, mulch y detalle general.
+                Es la base para que césped, limpieza y riego rindan mejor
+                durante todo el año.
+              </p>
+              <a class="text-link service-block__cta" href="#contacto" data-wa="info"
+                >Solicitar información</a
+              >
+            </div>
+          </article>
+
+          <article
+            id="servicio-cesped"
+            class="service-block anchor-target"
+            data-reveal
+          >
+            <figure class="service-block__media">
+              <img
+                src="assets/images/servicio2.jpg"
+                alt="Cuidado del césped — foto de servicio"
+                loading="lazy"
+              />
+            </figure>
+            <div class="service-block__content">
+              <div class="service-block__head">
+                <span class="service-block__index" aria-hidden="true">02</span>
+                <h3 class="service-block__title">Cuidado del césped</h3>
+              </div>
+              <p>
+                Altura de corte adecuada, bordes definidos y atención a zonas
+                con poco sol o pisoteo. Trabajamos el césped como parte del
+                mantenimiento integral: verde uniforme, sin encharcamientos ni
+                malas hierbas dominantes.
+              </p>
+              <a class="text-link service-block__cta" href="#contacto" data-wa="info"
+                >Solicitar información</a
+              >
+            </div>
+          </article>
+
+          <article
+            id="servicio-limpieza"
+            class="service-block anchor-target"
+            data-reveal
+          >
+            <figure class="service-block__media">
+              <img
+                src="assets/images/servicio3.jpg"
+                alt="Limpieza del terreno — foto de servicio"
+                loading="lazy"
+              />
+            </figure>
+            <div class="service-block__content">
+              <div class="service-block__head">
+                <span class="service-block__index" aria-hidden="true">03</span>
+                <h3 class="service-block__title">Limpieza del terreno</h3>
+              </div>
+              <p>
+                Retiro de hojas, ramas y residuos vegetales; desmalezado y
+                preparación de superficies antes de siembras o mejoras. Dejamos
+                el terreno listo para regar, plantar o disfrutar sin escombros
+                acumulados.
+              </p>
+              <a class="text-link service-block__cta" href="#contacto" data-wa="info"
+                >Solicitar información</a
+              >
+            </div>
+          </article>
+
+          <article
+            id="servicio-riego"
+            class="service-block anchor-target"
+            data-reveal
+          >
+            <figure class="service-block__media">
+              <img
+                src="assets/images/servicio4.jpg"
+                alt="Instalación de sistema de riego — foto de servicio"
+                loading="lazy"
+              />
+            </figure>
+            <div class="service-block__content">
+              <div class="service-block__head">
+                <span class="service-block__index" aria-hidden="true">04</span>
+                <h3 class="service-block__title">
+                  Instalación de sistema de riego
+                </h3>
+              </div>
+              <p>
+                Diseño e instalación de riego por aspersión o goteo según tu
+                jardín y clima. Programación para ahorrar agua y horas de
+                trabajo manual. Complementa el mantenimiento integral y el
+                cuidado del césped con un riego constante y eficiente.
+              </p>
+              <a class="text-link service-block__cta" href="#contacto" data-wa="info"
+                >Solicitar información</a
+              >
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="por-que"
+        class="section section--why"
+        aria-labelledby="why-heading"
+      >
+        <div class="container" data-reveal>
+          <h2 id="why-heading" class="section-heading">¿Por qué Gardeborn?</h2>
+          <p class="why-text">
+            Convertimos tu jardín en un espacio cuidado y ordenado, con visitas
+            planificadas, seguimiento real y soluciones claras para cada etapa.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="clientes"
+        class="section section--clients"
+        aria-labelledby="clientes-heading"
+      >
+        <div class="container clients-block" data-reveal>
+          <h2 id="clientes-heading" class="clients-block__title">
+            ¿Dónde sumamos?
+          </h2>
+          <p class="clients-block__hook">
+            Para espacios que deben verse bien todo el año, sin que el jardín
+            se vuelva una carga de tiempo y coordinación.
+          </p>
+          <ul class="clients-block__chips" aria-label="Tipos de espacios">
+            <li class="clients-block__chip">Casas y departamentos</li>
+            <li class="clients-block__chip">Áreas comunes</li>
+            <li class="clients-block__chip">Locales y fachadas verdes</li>
+            <li class="clients-block__chip">Proyectos nuevos</li>
+          </ul>
+          <p class="clients-block__cta">
+            Agenda una visita y recibe un plan de trabajo acorde a tu espacio.
+            <a href="#contacto" class="text-link" data-wa="info"
+              >Escríbenos y coordinamos hoy</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="novedades"
+        class="section section--news"
+        aria-labelledby="news-heading"
+      >
+        <div class="container">
+          <header class="section-header" data-reveal>
+            <h2 id="news-heading" class="section-heading">Ideas para tu jardín</h2>
+            <p class="section-lead">
+              Consejos alineados con mantenimiento integral, césped, limpieza y
+              riego
+            </p>
+          </header>
+
+          <div class="news-grid">
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/annie-spratt-j8xUK4ijoj0-unsplash.jpg.jpeg"
+                    alt="Calendario de mantenimiento integral"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Calendario básico de mantenimiento integral en el jardín
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Qué revisar cada mes para no acumular trabajo ni gastar de
+                    más en correcciones…
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/empty-chair-park.jpg.jpeg"
+                    alt="Césped en buen estado"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Cuidado del césped: frecuencia de riego y corte
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Cómo coordinar el riego con el sistema instalado y el
+                    mantenimiento del terreno…
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/marindab-wheelbarrow-5012981.jpg"
+                    alt="Limpieza del terreno"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Limpieza del terreno antes del cambio de estación
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Retiro de materia orgánica y por qué mejora el riego y el
+                    césped después…
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/servicio6.jpeg"
+                    alt="Sistema de riego"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Instalación de sistema de riego: por dónde empezar
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Zonas, presión y programador: lo esencial antes de
+                    presupuestar…
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/beautiful-shot-park-pathway-surrounded-with-amazing-nature.jpg.jpeg"
+                    alt="Jardín con riego y césped"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Integrar riego, césped y limpieza en un solo plan
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Cómo encajan las visitas cuando quieres todo lo que tu
+                    jardín necesita…
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card" data-reveal>
+              <a class="news-card__link" href="#contacto">
+                <figure class="news-card__media">
+                  <img
+                    src="assets/images/servicios.jpeg"
+                    alt="Mantenimiento integral Gardeborn"
+                    loading="lazy"
+                  />
+                </figure>
+                <div class="news-card__body">
+                  <h3 class="news-card__title">
+                    Preguntas frecuentes sobre mantenimiento integral
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Plazos, frecuencia de visitas y qué incluye un servicio
+                    completo de jardinería…
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="cta-strip" aria-label="Cotización" tabindex="-1">
+        <div class="container cta-strip__inner" data-reveal>
+          <h2 class="cta-strip__title">Hablemos de tu jardín</h2>
+          <p class="cta-strip__lead">
+            Cuéntanos qué necesitas y te respondemos por WhatsApp para coordinar
+            visita, alcance y tiempos.
+          </p>
+          <a
+            class="btn btn--primary"
+            href="#"
+            data-wa=""
+            aria-label="Abrir WhatsApp con Gardeborn"
+          >
+            Contactar por WhatsApp
+          </a>
+          <p class="cta-strip__note">Atendemos consultas y cotizaciones en el mismo chat.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">Gardeborn</p>
+          <p class="site-footer__address">
+            Servicios de jardinería — cobertura y horarios bajo consulta.
+          </p>
+          <p class="site-footer__contact">Atención por WhatsApp y coordinación directa.</p>
+        </div>
+        <p class="site-footer__credit">© <span id="current-year"></span> Gardeborn — Jardinería integral.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
