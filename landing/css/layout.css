@@ -5,6 +5,16 @@
 
 main {
   overflow-x: clip;
+  position: relative;
+}
+
+/*
+  Hero (#inicio) usa imagen position:fixed; el resto del main debe apilarse ENCIMA
+  (si no, el texto de secciones queda “detrás” del hero y parece transparente).
+*/
+main > section:not(#inicio) {
+  position: relative;
+  z-index: 1;
 }
 
 /* Anclas: la cabecera fija no tapa el título de la sección */
@@ -15,6 +25,7 @@ section[id],
 
 .section {
   padding-block: var(--space-section);
+  background: var(--color-bg);
 }
 
 .section--tight {
@@ -29,10 +40,11 @@ section[id],
   text-align: center;
 }
 
-.section--news {
-  background: var(--color-bg-muted);
-}
-
 .section--clients {
   text-align: left;
+}
+
+.site-footer {
+  position: relative;
+  z-index: 1;
 }
