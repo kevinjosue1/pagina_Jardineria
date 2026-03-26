@@ -8,10 +8,7 @@ main {
   position: relative;
 }
 
-/*
-  Hero (#inicio) usa imagen position:fixed; el resto del main debe apilarse ENCIMA
-  (si no, el texto de secciones queda “detrás” del hero y parece transparente).
-*/
+/* Capas: secciones por encima del fondo cuando hace falta (hero carrusel en flujo normal). */
 main > section:not(#inicio) {
   position: relative;
   z-index: 1;
@@ -20,7 +17,7 @@ main > section:not(#inicio) {
 /* Anclas: la cabecera fija no tapa el título de la sección */
 section[id],
 [id].anchor-target {
-  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+  scroll-margin-top: calc(var(--header-h) + var(--header-offset) + 0.75rem);
 }
 
 .section {

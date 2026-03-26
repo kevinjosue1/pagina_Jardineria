@@ -49,6 +49,10 @@ html.js-reveal-active [data-reveal]:not(.is-revealed) {
   .service-block:hover .service-block__media img {
     transform: scale(1.04);
   }
+
+  .spotlights.hero-carousel .spotlight-card__media img {
+    transition: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

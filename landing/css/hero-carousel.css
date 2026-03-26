@@ -1,0 +1,290 @@
+/**
+ * Estilos del carrusel del inicio (#inicio .hero-carousel).
+ * Incluido aparte para localizarlos fácil; se carga después de components.css.
+ */
+
+.spotlights.hero-carousel {
+  display: flex;
+  flex-direction: column;
+  padding-block: 0;
+  padding-inline: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+  /* Dejar el hero en su flujo normal para evitar cortes/solapes visuales */
+  margin-top: 0;
+  background: transparent;
+  /* Al ir a #inicio, anclar al inicio del hero (no dejar hueco por scroll-margin global). */
+  scroll-margin-top: 0;
+}
+
+.hero-carousel__stage {
+  width: 100%;
+  margin-inline: 0;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-carousel__cta {
+  display: flex;
+  justify-content: center;
+  width: var(--container);
+  margin-inline: auto;
+  padding: clamp(0.85rem, 2.5vw, 1.15rem) clamp(1rem, 4vw, 2rem) 0.35rem;
+}
+
+.hero-carousel__viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: var(--hero-media-height);
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 0.06);
+  background: var(--color-bg-muted);
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .hero-carousel__viewport {
+    border-radius: 0 0 12px 12px;
+    box-shadow:
+      inset 0 -1px 0 rgb(0 0 0 / 0.06),
+      0 12px 32px rgb(26 48 38 / 0.08);
+  }
+}
+
+.hero-carousel__viewport:focus-visible {
+  /* Evita el borde visible por foco (se ve como una línea arriba) */
+  outline: none;
+  outline-offset: 0;
+}
+
+.hero-carousel__track {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+  will-change: transform;
+}
+
+.hero-carousel__slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  align-self: stretch;
+}
+
+.hero-carousel__chrome {
+  flex-shrink: 0;
+  margin-top: 1rem;
+  padding-bottom: clamp(0.9rem, 2.8vw, 1.65rem);
+}
+
+.hero-carousel__controls {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin-top: 1rem;
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.hero-carousel__arrow {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-accent-dark);
+  background: var(--color-bg);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 0.06);
+  cursor: pointer;
+  transition:
+    background var(--duration) var(--ease-out),
+    color var(--duration) var(--ease-out),
+    border-color var(--duration) var(--ease-out),
+    box-shadow var(--duration) var(--ease-out),
+    transform 0.15s ease;
+}
+
+.hero-carousel__arrow:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+  box-shadow: var(--shadow-accent);
+}
+
+.hero-carousel__arrow:active {
+  transform: scale(0.96);
+}
+
+.hero-carousel__arrow:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.hero-carousel__arrow-icon {
+  display: block;
+}
+
+.hero-carousel__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  min-height: 2.75rem;
+}
+
+.hero-carousel__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  cursor: pointer;
+  transition:
+    background var(--duration) var(--ease-out),
+    transform var(--duration) var(--ease-out);
+}
+
+.hero-carousel__dot:hover {
+  background: color-mix(in srgb, var(--color-accent) 55%, transparent);
+}
+
+.hero-carousel__dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.15);
+}
+
+.hero-carousel__dot:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Tarjetas del carrusel */
+.spotlight-card {
+  background: var(--color-bg);
+  box-shadow: none;
+  border-radius: 0;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-carousel__viewport .spotlight-card {
+  border-radius: 0;
+}
+
+.spotlight-card__link {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.spotlight-card__link:hover {
+  text-decoration: none;
+}
+
+.spotlights.hero-carousel .spotlight-card__media {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  width: 100%;
+  flex: 0 0 auto;
+  height: var(--hero-media-height);
+  min-height: var(--hero-media-height);
+  max-height: var(--hero-media-height);
+  overflow: hidden;
+  background: var(--color-bg-muted);
+  min-width: 0;
+}
+
+.spotlights.hero-carousel .spotlight-card__link {
+  position: relative;
+  min-height: var(--hero-media-height);
+  height: var(--hero-media-height);
+}
+
+.spotlights.hero-carousel .spotlight-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.6) 0%,
+    rgb(0 0 0 / 0.34) 38%,
+    rgb(0 0 0 / 0.12) 64%,
+    rgb(0 0 0 / 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+.spotlights.hero-carousel .spotlight-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  min-height: 0;
+  object-fit: cover;
+  object-position: var(--hero-media-object-position);
+}
+
+.spotlight-card__body {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding: clamp(0.85rem, 2.5vw, 1.1rem) clamp(1rem, 4vw, 2rem) 1.15rem;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.spotlights.hero-carousel .spotlight-card__body {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 2;
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding:
+    clamp(1.4rem, 3.4vw, 2.1rem)
+    clamp(1rem, 4vw, 2rem)
+    clamp(1.5rem, 4.2vw, 2.4rem);
+  color: #fff;
+}
+
+.spotlights.hero-carousel .spotlight-card__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.28rem, 4.2vw, 2.8rem);
+  font-weight: 800;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 0.35);
+}
+
+.spotlights.hero-carousel .spotlight-card__tagline {
+  margin: 0 0 0.95rem;
+  max-width: 56ch;
+  font-size: clamp(0.95rem, 1.8vw, 1.3rem);
+  color: rgb(255 255 255 / 0.96);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.5;
+}

@@ -34,8 +34,10 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.35s;
   --header-h: 72px;
-  /* Hero estático: un poco más alto, sin ocupar toda la pantalla */
-  --hero-media-height: clamp(390px, 62vh, 620px);
+  --header-offset: 10px;
+  --carousel-autoplay-ms: 5500;
+  /* Hero / carrusel: altura de la imagen de portada */
+  --hero-media-height: clamp(360px, 58vh, 560px);
   /* Recorte superior: el foco baja y se “corta” un poco el cielo/zona alta */
   --hero-media-object-position: center 30%;
 
