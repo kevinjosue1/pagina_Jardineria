@@ -17,7 +17,7 @@ main > section:not(#inicio) {
 /* Anclas: la cabecera fija no tapa el título de la sección */
 section[id],
 [id].anchor-target {
-  scroll-margin-top: calc(var(--header-h) + var(--header-offset) + 0.75rem);
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
 }
 
 .section {

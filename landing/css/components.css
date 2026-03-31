@@ -1,21 +1,21 @@
 /* ——— Cabecera y navegación (transparente, logo centrado, menú hamburguesa izquierda) ——— */
 .site-header {
   position: fixed;
-  top: var(--header-offset);
+  top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
+  /* Opacidad 0–1: la actualiza JS según el scroll (verde marca #2c582c) */
+  --header-solid-alpha: 0;
+  background: rgb(44 88 44 / var(--header-solid-alpha));
   color: var(--color-text);
   box-shadow: none;
-  transition:
-    border-color var(--duration) var(--ease-out),
-    background-color var(--duration) var(--ease-out);
+  /* Sin transición en el fondo: va ligado al scroll; solo sombra suave al rellenar */
+  transition: box-shadow var(--duration) var(--ease-out);
 }
 
 .site-header.is-scrolled {
-  background: transparent;
-  box-shadow: none;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 0.14);
 }
 
 .site-header__inner {
@@ -173,7 +173,7 @@
 
 .site-nav {
   position: fixed;
-  top: calc(var(--header-h) + var(--header-offset));
+  top: var(--header-h);
   left: 0;
   bottom: 0;
   width: min(50vw, 22.5rem);
@@ -482,6 +482,24 @@
   text-align: center;
 }
 
+/* Nosotros: bloque intro (texto; la foto se usa de fondo en «¿Por qué elegir Gardeborn?») */
+.company-band__intro {
+  max-width: 56rem;
+  margin: 0 auto clamp(1.75rem, 4.5vw, 2.75rem);
+}
+
+.company-band__header--intro {
+  margin: 0;
+  max-width: none;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+  .company-band__header--intro {
+    text-align: center;
+  }
+}
+
 .company-band__eyebrow {
   margin: 0 0 0.5rem;
   font-size: 0.72rem;
@@ -579,6 +597,104 @@
     text-align: left;
     margin-inline: 0;
   }
+}
+
+/* ——— ¿Por qué elegir Gardeborn? ——— Foto + velo oscuro suave para contraste del texto/iconos */
+.why-gardeborn {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 45%, transparent);
+  color: var(--color-header-text);
+}
+
+.why-gardeborn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("../assets/images/porqueelegirnos.jpeg") center center / cover
+    no-repeat;
+}
+
+.why-gardeborn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Oscurece un poco el fondo sin tapar el verde de la foto */
+  background: rgb(8 22 14 / 0.42);
+}
+
+/* Misma lógica que .container.company-band: ancho de página + columna 56rem centrada */
+.why-gardeborn__band {
+  position: relative;
+  z-index: 2;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+.why-gardeborn__inner {
+  max-width: 56rem;
+  margin-inline: auto;
+  text-align: start;
+}
+
+.why-gardeborn__title {
+  margin: 0 0 0.85rem;
+  font-size: clamp(1.45rem, 3.2vw, 1.95rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: var(--color-header-text);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.45);
+}
+
+.why-gardeborn__lead {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-header-text) 90%, transparent);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+.why-gardeborn__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.85rem, 2vw, 1.1rem);
+}
+
+.why-gardeborn__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--color-header-text);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+.why-gardeborn__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  line-height: 0;
+}
+
+.why-gardeborn__icon img {
+  width: auto;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.55));
+}
+
+.why-gardeborn__item-text {
+  flex: 1;
+  min-width: 0;
 }
 
 .company-pillar {

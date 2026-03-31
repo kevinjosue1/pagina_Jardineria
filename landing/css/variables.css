@@ -34,7 +34,6 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.35s;
   --header-h: 72px;
-  --header-offset: 10px;
   --carousel-autoplay-ms: 5500;
   /* Hero / carrusel: altura de la imagen de portada */
   --hero-media-height: clamp(360px, 58vh, 560px);

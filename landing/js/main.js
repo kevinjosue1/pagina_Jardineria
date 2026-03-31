@@ -37,12 +37,20 @@ const navBackdrop = document.querySelector(".site-header__backdrop");
 function initHeaderOnScroll() {
   if (!siteHeader) return;
 
-  const toggleScrolledHeader = () => {
-    siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+  /** Fondo del header: transparente sobre el hero → verde #2c582c al bajar (progresivo). */
+  const SCROLL_SOLID_START = 28;
+  const SCROLL_SOLID_END = 220;
+
+  const updateHeaderSolid = () => {
+    const y = window.scrollY;
+    let t = (y - SCROLL_SOLID_START) / (SCROLL_SOLID_END - SCROLL_SOLID_START);
+    t = Math.max(0, Math.min(1, t));
+    siteHeader.style.setProperty("--header-solid-alpha", t.toFixed(3));
+    siteHeader.classList.toggle("is-scrolled", t > 0.08);
   };
 
-  toggleScrolledHeader();
-  window.addEventListener("scroll", toggleScrolledHeader, { passive: true });
+  updateHeaderSolid();
+  window.addEventListener("scroll", updateHeaderSolid, { passive: true });
 }
 
 function closeNav() {
