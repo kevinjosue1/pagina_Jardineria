@@ -464,12 +464,27 @@
 
 /* ——— Nosotros: bloque empresa + pilares (Misión / Visión) ——— */
 .band-intro--company {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-bg-muted) 55%, var(--color-bg)) 0%,
-    var(--color-bg) 72%
-  );
-  border-block-color: color-mix(in srgb, var(--color-border) 85%, transparent);
+  --company-banner-opacity: 0.4;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  background: var(--color-bg);
+}
+
+.band-intro--company::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("../assets/images/bannerSeccionesBlancas.png") center center /
+    cover no-repeat;
+  opacity: var(--company-banner-opacity);
+  pointer-events: none;
+}
+
+.band-intro--company > * {
+  position: relative;
+  z-index: 1;
 }
 
 .company-band {
@@ -482,7 +497,7 @@
   text-align: center;
 }
 
-/* Nosotros: bloque intro (texto; la foto se usa de fondo en «¿Por qué elegir Gardeborn?») */
+/* Nosotros: bloque intro (texto principal de la sección) */
 .company-band__intro {
   max-width: 56rem;
   margin: 0 auto clamp(1.75rem, 4.5vw, 2.75rem);
